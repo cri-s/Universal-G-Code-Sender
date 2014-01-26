@@ -51,6 +51,7 @@ Changelog
 * Settings saved between runs (thanks lazyzero)
 * Major backend refactoring to make code more stable and testable.
 * Unit tests added, over 1300 lines of unit test code.
+* Tinyg support now included. Thank you John Lauer.
 
 1.0.4 -> 1.0.5
 * Job duration estimate now displayed when running a file.

@@ -720,6 +720,11 @@ implements KeyListener, ControllerListener {
 
         cbTinygMode.setSelected(true);
         cbTinygMode.setText("TinyG Mode");
+        cbTinygMode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbTinygModeActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -1272,6 +1277,10 @@ implements KeyListener, ControllerListener {
             this.displayErrorDialog(ex.getMessage());
         }
     }//GEN-LAST:event_softResetMachineControlActionPerformed
+
+    private void cbTinygModeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTinygModeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbTinygModeActionPerformed
 
     /**
      * @param args the command line arguments
