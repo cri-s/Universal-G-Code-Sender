@@ -8,8 +8,11 @@ send in multiple commands for the planner to do its work, but then mapping the r
 from TinyG to the front-end UI is a bit more work. This fork solves that.
 
 There are items that don't work that haven't been wired up yet, like showing you the current
-XYZ position of TinyG. You have to instead just send the "status" command to TinyG from the
-TinyG tab.
+XYZ position of TinyG. You have to instead just send the "pos" command to TinyG from the
+TinyG tab. I created some buttons to send those commands easily. You can also send direct 
+JSON commands from the command tab of UGS. For example, just type "?" in the command window
+and you'll get position info back from TinyG. If you type in Gcode, I also wrap it in JSON
+for TinyG when you do so. 
 
 Also, as I have found on my Shapeoko, I need to turn the motors on before a job starts so 
 that I don't lose position while milling. I then turn off the motors by turning Power Mgmt
@@ -18,6 +21,12 @@ after you turn power mgmt back on or the TinyG won't put the motors into sleep m
 
 TinyG tab inside UGS
 ![Command table tab during a file send](https://github.com/johnlauer/Universal-G-Code-Sender/raw/master/pictures/tinygtab.png "Tab inside UGS for TinyG commands.")
+
+To run this code I simply open it inside Netbeans and hit Run from Netbeans. I do not run it from 
+the compiled version as I found that it's easier to do it inside Netbeans. Also, if you want to 
+tweak any commands it's easier to do by modifying the source and re-running.
+
+-John
 
 Here's the original readme content for UGS below...
 
