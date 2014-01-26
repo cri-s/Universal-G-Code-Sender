@@ -1,4 +1,28 @@
-Universal GcodeSender is a Java based GRBL compatibl cross platform G-Code sender. Use this program to run a GRBL controlled CNC machine.
+This is a fork of Universal GcodeSender for TinyG. 
+
+There have been some basic modifications made to support the JSON format that TinyG uses as
+well as the unique model that TinyG uses for sending back responses when a command has been
+processed. Typically CNC controllers accept one Gcode command and when you get a newline
+response from the controller the command has been accepted. Instead on TinyG you can
+send in multiple commands for the planner to do its work, but then mapping the responses back
+from TinyG to the front-end UI is a bit more work. This fork solves that.
+
+There are items that don't work that haven't been wired up yet, like showing you the current
+XYZ position of TinyG. You have to instead just send the "status" command to TinyG from the
+TinyG tab.
+
+Also, as I have found on my Shapeoko, I need to turn the motors on before a job starts so 
+that I don't lose position while milling. I then turn off the motors by turning Power Mgmt
+back on when the job is finished. Don't forget to send some movement commands to your motors
+after you turn power mgmt back on or the TinyG won't put the motors into sleep mode.
+
+TinyG tab inside UGS
+![Command table tab during a file send](https://github.com/johnlauer/Universal-G-Code-Sender/raw/master/pictures/tinygtab.png "Tab inside UGS for TinyG commands.")
+
+Here's the original readme content for UGS below...
+
+Universal GcodeSender is a Java based GRBL compatibl cross platform G-Code sender. 
+Use this program to run a GRBL controlled CNC machine.
 
 To run simply unzip the .zip file and double click the .jar file.
 On some platforms you will need to run an included start script.
