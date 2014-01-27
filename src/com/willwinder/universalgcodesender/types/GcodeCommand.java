@@ -41,19 +41,11 @@ public class GcodeCommand {
     private Boolean isError = false;
     private Integer commandNum = -1;
     
-    public GcodeCommand(String command) {
-        this(command, -1, false);
-    }
-    
-    public GcodeCommand(String command, int num) {
-        this(command, num, false);
-    }
+    /*public GcodeCommand(String command, boolean isTinygMode) {
+        GcodeCommand(command, -1, isTinygMode);
+    }*/
     
     public GcodeCommand(String command, boolean isTinygMode) {
-        this(command, -1, isTinygMode);
-    }
-    
-    public GcodeCommand(String command, int num, boolean isTinygMode) {
         
         // rewrap the commands into json for the tinyg controller
         if (isTinygMode) {  
@@ -78,10 +70,6 @@ public class GcodeCommand {
         } else {
             // handle as normal
             this.command = command;
-        }
-        
-        if (num != -1) {
-            this.commandNum = num;
         }
     }
     

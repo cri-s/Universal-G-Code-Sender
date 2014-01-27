@@ -174,10 +174,6 @@ public class GrblController implements SerialCommunicatorListener {
         return "<not connected>";
     }
     
-    public Boolean openCommPort(String port, int portRate) throws Exception {
-        return openCommPort(port, portRate, false);
-    }
-    
     public Boolean openCommPort(String port, int portRate, boolean isTinygMode) throws Exception {
         
         // Store whether we're in tinygmode

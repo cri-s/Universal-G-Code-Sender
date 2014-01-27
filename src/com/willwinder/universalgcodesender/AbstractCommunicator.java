@@ -83,10 +83,6 @@ public abstract class AbstractCommunicator{
         }
     }
     
-    String getLineTerminator() {
-        return getLineTerminator(false);
-    }
-    
     String getLineTerminator(boolean isTinygMode) {
         if (isTinygMode)
             return "\n";

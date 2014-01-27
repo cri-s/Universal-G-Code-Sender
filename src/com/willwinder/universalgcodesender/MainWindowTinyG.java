@@ -64,12 +64,12 @@ import javax.vecmath.Point3d;
  *
  * @author wwinder
  */
-public class MainWindow extends javax.swing.JFrame 
+public class MainWindowTinyG extends javax.swing.JFrame 
 implements KeyListener, ControllerListener {
     private static String VERSION = "1.0.6";
 
     /** Creates new form MainWindow */
-    public MainWindow() {
+    public MainWindowTinyG() {
         initComponents();
         initProgram();
     }
@@ -1548,13 +1548,13 @@ implements KeyListener, ControllerListener {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainWindowTinyG.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainWindowTinyG.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainWindowTinyG.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainWindowTinyG.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         
@@ -1562,7 +1562,7 @@ implements KeyListener, ControllerListener {
         SettingsFactory.loadSettings();
 
         /* Create the form */
-        final MainWindow mw = new MainWindow();
+        final MainWindowTinyG mw = new MainWindowTinyG();
         
         /* Apply the settings to the MainWindow bofore showing it */
         mw.arrowMovementEnabled.setSelected(SettingsFactory.getManualControllesEnabled());
